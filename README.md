@@ -11,8 +11,6 @@
     - [CocoaPods](#CocoaPods)
     
 - [Usage](#usage)
-    - [Storyboard](#Storyboard)
-    - [ViewController](#ViewController)
     
 - [License](#license)
 
@@ -47,57 +45,57 @@ $ pod install
 ```
 
 ## Usage
-### Storyboard
-1. You must create your storyboard filenames by extension to `UIStoryboard.Filename`.
+### Create storyboard instance
+First of all you must use `UIStoryboardFilename` protocol for create safe storyboard instance. The easiest way is create `enum`.  
 
 ```swift
 /// The safe name of the storyboard resource.
-extension UIStoryboard.Filename {
+enum MyProjectStoryboard: String, UIStoryboardFilename {
+    
+    /// Login.storyboard filename
+    case login
+    
+    /// Main.storybard filename
+    case main
+    
+    /// The safe name of the storyboard resource without extension. For exmple for `Main.story` file you need get only name `Main`.
+    var storyboardFilename: String { 
+        return self.rawValue.capitalized
+    }
 
-    static var login: UIStoryboard.Filename {
-        return "Login"
-    }
-    
-    static var main: UIStoryboard.Filename {
-        return "Main"
-    }
-    
-    static var modal: UIStoryboard.Filename {
-        return "Modal"
-    }
 }
 ```
-
-2. You can create new instance of `UIStoryboard` from `UIStoryboardName`.
+ You can create new instance of `UIStoryboard` from `UIStoryboardName`.
 ```swift
 // Create `Login.storyboard` instance
-let loginStoryboard = UIStoryboard(.login)
+let loginStoryboard = UIStoryboard(MyProjectStoryboard.login)
 
 // Create `Main.storyboard` instance
-let mainStoryboard = UIStoryboard(.main)
-
-// Create `Modal.storyboard` instance
-let modalStoryboard = UIStoryboard(.modal)
+let mainStoryboard = UIStoryboard(MyProjectStoryboard.main)
 ```
 
-### ViewController
-1. Try to get `instantiateInitialViewController` or `instantiateViewController` from storyboard with force casting to selected type
+### Get  `instantiateInitialViewController`
+You can get storyboard `instantiateInitialViewController` with force casting to selected type.
+
 ```swift
-// First of all - you need get storyboard instance
-let storyboard = UIStoryboard(UIStoryboardName.main)
+let storyboard = UIStoryboard(MyProjectStoryboard.main)
     
-// Next. You need try to get `instantiateInitialViewController` from storyboard with selected type. If `viewController` can't cast to selected type you fetch fatal error!
 let initialViewController_0 = storyboard.initialViewController(UINavigationController.self)  
 
 // It's the same way to get initialViewController as `initialViewController_0` but have different syntaxis. Use which is more suitable for you
 let initialViewController_1: UINavigationController = storyboard.initialViewController() 
+```
 
-// Finally. You can try to get `instantiateViewController` with storyboard id from storyboard with selected type. If `viewController` `storyboardFilename` is not equal to Storyboard ID or can't cast to selected type you fetch fatal error!
+### Get `instantiateViewController`
+You can get storyboard `instantiateViewController` with storyboard identefier value `storyboardReferenceIdentefier` and force casting to selected type.
+```swift
 let viewController_0 = storyboard.viewController(UITableViewController.self)
 
 // It's the same way to get viewController as `viewController_0` but have different syntaxis. Use which is more suitable for you
 let viewController_1: UITableViewController = storyboard.viewController()
 ```
+
+### Attention! If viewController can't cast to selected type or storyboard don't have view controller with identefier you fetch fatal error!
 
 ## License
 Released under the MIT license. See [LICENSE](https://github.com/YuriFox/UIStoryboardReference/blob/master/LICENSE) for details.

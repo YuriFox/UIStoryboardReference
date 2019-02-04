@@ -17,6 +17,13 @@ public protocol UIStoryboardReference: class {
     
 }
 
+public protocol UIStoryboardFilename: class {
+    
+    /// The safe name of the storyboard resource without extension. For exmple for `Main.story` file you need get only name `Main`.
+    var storyboardFilename: String { get }
+    
+}
+
 extension UIStoryboard {
 
     /// Creates and returns a storyboard object for the specified storyboard resource file name.
@@ -24,8 +31,8 @@ extension UIStoryboard {
     /// - Parameters:
     ///   - filename: The filename of the storyboard resource.
     ///   - bundle: The bundle containing the storyboard file and its related resources. If you specify nil, this method looks in the main bundle of the current application.
-    public convenience init(_ filename: Filename, bundle: Bundle? = nil) {
-        self.init(name: filename, bundle: bundle)
+    public convenience init(_ filename: UIStoryboardFilename, bundle: Bundle? = nil) {
+        self.init(name: filename.storyboardFilename, bundle: bundle)
     }
 
     /// Instantiates and returns the initial view controller in the view controller graph
@@ -67,9 +74,6 @@ extension UIStoryboard {
     public func viewController<T: UIViewController>() -> T {
         return self.viewController(T.self)
     }
-    
-    /// The safe name of the storyboard resource. Storyboard filename without `.storyboard`.
-    public typealias Filename = String
 
 }
 
