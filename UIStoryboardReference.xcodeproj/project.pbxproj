@@ -8,18 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DAE21A512208444B0014E8FA /* UIStoryboardReference.h in Headers */ = {isa = PBXBuildFile; fileRef = DAE21A4F2208444B0014E8FA /* UIStoryboardReference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAE21A58220844B80014E8FA /* UIStoryboardReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21A57220844B80014E8FA /* UIStoryboardReference.swift */; };
-		DAE21A5A220845290014E8FA /* UIStoryboardFilename.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21A59220845290014E8FA /* UIStoryboardFilename.swift */; };
-		DAE21A5C220845870014E8FA /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21A5B220845870014E8FA /* UIStoryboard+Extension.swift */; };
+		DAE21A5C220845870014E8FA /* UIStoryboardReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE21A5B220845870014E8FA /* UIStoryboardReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DAE21A4C2208444B0014E8FA /* UIStoryboardReference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIStoryboardReference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE21A4F2208444B0014E8FA /* UIStoryboardReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIStoryboardReference.h; sourceTree = "<group>"; };
 		DAE21A502208444B0014E8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAE21A57220844B80014E8FA /* UIStoryboardReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardReference.swift; sourceTree = "<group>"; };
-		DAE21A59220845290014E8FA /* UIStoryboardFilename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardFilename.swift; sourceTree = "<group>"; };
-		DAE21A5B220845870014E8FA /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		DAE21A5B220845870014E8FA /* UIStoryboardReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE21A4F2208444B0014E8FA /* UIStoryboardReference.h */,
-				DAE21A57220844B80014E8FA /* UIStoryboardReference.swift */,
-				DAE21A59220845290014E8FA /* UIStoryboardFilename.swift */,
-				DAE21A5B220845870014E8FA /* UIStoryboard+Extension.swift */,
+				DAE21A5B220845870014E8FA /* UIStoryboardReference.swift */,
 				DAE21A502208444B0014E8FA /* Info.plist */,
 			);
 			path = Source;
@@ -140,9 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE21A58220844B80014E8FA /* UIStoryboardReference.swift in Sources */,
-				DAE21A5A220845290014E8FA /* UIStoryboardFilename.swift in Sources */,
-				DAE21A5C220845870014E8FA /* UIStoryboard+Extension.swift in Sources */,
+				DAE21A5C220845870014E8FA /* UIStoryboardReference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
