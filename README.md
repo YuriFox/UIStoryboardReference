@@ -55,15 +55,15 @@ $ pod install
 extension UIStoryboard.Filename {
 
     static var login: UIStoryboard.Filename {
-        return UIStoryboard.Filename(name: "Login")
+        return "Login"
     }
     
     static var main: UIStoryboard.Filename {
-        return UIStoryboard.Filename(name: "Main")
+        return "Main"
     }
     
     static var modal: UIStoryboard.Filename {
-        return UIStoryboard.Filename(name: "Modal")
+        return "Modal"
     }
 }
 ```
