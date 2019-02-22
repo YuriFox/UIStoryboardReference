@@ -23,7 +23,7 @@ pod 'UIStoryboardReference'
 
 ## 💻 Usage
 ### Integrate
-**0.** You can simply copy the code from the [**Example**](UIStoryboard+Name.swift) and change cases inside the `UIStoryboard.Name` enum **OR** try to do it yourself and start from next step.
+**0.** You can simply copy the code from the ![**Example**](Source/UIStoryboard+Name.swift) and change cases inside the `UIStoryboard.Name` enum **OR** try to do it yourself and start from next step.
 
 **1.** Create `.swift` file in your project. You can name it whatever you like. For example: `UIStoryboard+Name.swift`
 
@@ -137,7 +137,7 @@ let instantiateInitialTypeViewController: NavigationController = NavigationContr
 ```
 
 ### Instantiate View Controller
-**0.** Set `UIViewController` _custom class_ and _storyboard ID_
+**0.** Set `UIViewController` _custom class_ and _storyboard ID_.  
 ![](Example_img_0.png)
 
 **1.** With `UIStoryboard` instance
