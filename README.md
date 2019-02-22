@@ -6,11 +6,11 @@
 [![license](https://img.shields.io/badge/license-MIT-lightgray.svg)]()
 
 - [Installation](#-installation)
-    - [CocoaPods](#cocoapods)    
-- [Usage](#usage)
+    - [CocoaPods](#using-cocoapods)    
+- [Usage](#-usage)
     - [Integrate](#integrate)
-    - [Storyboard Instance](#storyboard-instance)
-    - [View Controller Instance](#view-controller-instance)
+    - [Storyboard](#storyboard-instance)
+    - [ViewController](#instantiate-view-controller)
 - [Next steps](#-next-steps)
 - [License](#-license)
 
