@@ -157,6 +157,7 @@ let instantiateViewController = RedViewController.instantiate(from:.main)
 ```
 
 ## 📋 Next steps
+- [x] Example
 - [x] Documentation
 - [ ] Storyboard cache
 

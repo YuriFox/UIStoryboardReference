@@ -38,41 +38,21 @@ extension UIStoryboard {
     /// Instantiates and returns the initial view controller in the view controller graph
     ///
     /// - Parameter controllerType: The initial view controller
-    public func initialViewController<T: UIViewController>(_ controllerType: T.Type) -> T {
-
-        guard let controller = self.instantiateInitialViewController() as? T else {
-            fatalError("Couldn't instantiate initial view controller with identifier")
-        }
-
-        return controller
-
-    }
-
-    /// Instantiates and returns the initial view controller in the view controller graph
-    ///
-    /// - Parameter controllerType: The initial view controller
     public func initialViewController<T: UIViewController>() -> T {
-        return self.initialViewController(T.self)
+        guard let controller = self.instantiateInitialViewController() as? T else {
+            fatalError("Couldn't instantiate initial view controller")
+        }
+        return controller
     }
     
     /// Instantiates and returns the view controller with the specified storyboard reference identefier.
     ///
     /// - Returns: The view controller corresponding to the specified storyboard reference identifier string. If no view controller is associated with the string, this method throws an exception.
-    public func viewController<T: UIViewController>(_ controllerType: T.Type) -> T {
-
-        guard let controller = self.instantiateViewController(withIdentifier: controllerType.storyboardReferenceIdentefier) as? T else {
+    public func viewController<T: UIViewController>() -> T {
+        guard let controller = self.instantiateViewController(withIdentifier: T.storyboardReferenceIdentefier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardReferenceIdentefier)")
         }
-
         return controller
-
-    }
-
-    /// Instantiates and returns the view controller with the specified storyboard reference identefier.
-    ///
-    /// - Returns: The view controller corresponding to the specified storyboard reference identifier string. If no view controller is associated with the string, this method throws an exception.
-    public func viewController<T: UIViewController>() -> T {
-        return self.viewController(T.self)
     }
     
 }
