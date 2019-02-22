@@ -138,7 +138,7 @@ let instantiateInitialTypeViewController: NavigationController = NavigationContr
 
 ### Instantiate View Controller
 **0.** Set `UIViewController` _custom class_ and _storyboard ID_
-![](example_img_0.png)
+![](Example_img_0.png)
 
 **1.** With `UIStoryboard` instance
 ```swift
