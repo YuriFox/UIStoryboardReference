@@ -17,7 +17,7 @@ public protocol UIStoryboardReference: class {
     
 }
 
-public protocol UIStoryboardFilename: class {
+public protocol UIStoryboardFilename {
     
     /// The safe name of the storyboard resource without extension. For exmple for `Main.story` file you need get only name `Main`.
     var storyboardFilename: String { get }
@@ -31,7 +31,7 @@ extension UIStoryboard {
     /// - Parameters:
     ///   - filename: The filename of the storyboard resource.
     ///   - bundle: The bundle containing the storyboard file and its related resources. If you specify nil, this method looks in the main bundle of the current application.
-    public convenience init(_ filename: UIStoryboardFilename, bundle: Bundle? = nil) {
+    public convenience init(filename: UIStoryboardFilename, bundle: Bundle? = nil) {
         self.init(name: filename.storyboardFilename, bundle: bundle)
     }
 
@@ -74,10 +74,28 @@ extension UIStoryboard {
     public func viewController<T: UIViewController>() -> T {
         return self.viewController(T.self)
     }
-
+    
 }
 
 extension UIViewController: UIStoryboardReference {
+
+    /// Instantiates and returns the initial view controller from storyboard.
+    ///
+    /// - Parameter storyboardFilename: Storyboard filename when view controller exist
+    /// - Returns: Return initial view controller from storyboard
+    public static func instantiateInitial(from storyboardFilename: UIStoryboardFilename) -> Self {
+        let storyboard = UIStoryboard(filename: storyboardFilename)
+        return storyboard.initialViewController()
+    }
+    
+    /// Instantiates and returns the view controller with the specified storyboard reference identefier.
+    ///
+    /// - Parameter storyboardFilename: Storyboard filename when view controller exist
+    /// - Returns: The view controller corresponding to the specified storyboard reference identifier string. If no view controller is associated with the string, this method throws an exception.
+    public static func instantiate(from storyboardFilename: UIStoryboardFilename) -> Self {
+        let storyboard = UIStoryboard(filename: storyboardFilename)
+        return storyboard.viewController()
+    }
     
     public static var storyboardReferenceIdentefier: String {
         return String(describing: self)

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "UIStoryboardReference"
-  s.version      = "1.0.2"
+  s.version      = "1.1"
   s.summary      = "UIStoryboard safe reference"
   s.description  = "Easy and safe way to deal with UIStoryboard"
 
