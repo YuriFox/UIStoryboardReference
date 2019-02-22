@@ -63,6 +63,7 @@
 		DA907D51221F604000787A0C /* OrangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeViewController.swift; sourceTree = "<group>"; };
 		DA907D58221F664000787A0C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		DA907D5A221F688D00787A0C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA907D5B221FEFA100787A0C /* Example_img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example_img_0.png; sourceTree = "<group>"; };
 		DAE21A4C2208444B0014E8FA /* UIStoryboardReference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIStoryboardReference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE21A4F2208444B0014E8FA /* UIStoryboardReference.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIStoryboardReference.h; sourceTree = "<group>"; };
 		DAE21A502208444B0014E8FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				DA907D5A221F688D00787A0C /* README.md */,
+				DA907D5B221FEFA100787A0C /* Example_img_0.png */,
 				DAE21A4E2208444B0014E8FA /* Source */,
 				DA907D2F221F5C3700787A0C /* Example */,
 				DAE21A4D2208444B0014E8FA /* Products */,

@@ -102,3 +102,11 @@ extension UIViewController: UIStoryboardReference {
     }
     
 }
+
+extension String: UIStoryboardFilename {
+    
+    public var storyboardFilename: String {
+        return self
+    }
+    
+}
