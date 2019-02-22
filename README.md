@@ -5,7 +5,7 @@
 [![language](https://img.shields.io/badge/pod-4.0.0-blue.svg)]()
 [![license](https://img.shields.io/badge/license-MIT-lightgray.svg)]()
 
-- [Installation](#installation)
+- [Installation](#-installation)
     - [CocoaPods](#cocoapods)    
 - [Usage](#usage)
     - [Integrate](#integrate)
