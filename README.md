@@ -5,14 +5,14 @@
 [![language](https://img.shields.io/badge/pod-4.0.0-blue.svg)]()
 [![license](https://img.shields.io/badge/license-MIT-lightgray.svg)]()
 
-- [Installation](#installation)
+- [Installation](#-installation)
     - [CocoaPods](#cocoapods)    
 - [Usage](#usage)
     - [Integrate](#integrate)
-    - [Storyboard Instance](#storyboard)
-    - [View Controller Instance](#viewcontroller)
-- [Next steps](#nextsteps)
-- [License](#license)
+    - [Storyboard Instance](#storyboard-instance)
+    - [View Controller Instance](#view-controller-instance)
+- [Next steps](#-next-steps)
+- [License](#-license)
 
 ## 📲 Installation
 ### Using [CocoaPods](https://cocoapods.org)
